@@ -6,6 +6,7 @@ public class Main {
         System.out.println(isPalindrome("1234543210"));
     }
 
+
     static boolean isPalindrome(String value) {
         int len = value.length();
         for (int i = 0; i < len / 2; i++) {

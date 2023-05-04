@@ -5,8 +5,7 @@ import java.util.HashMap;
 public class RomanToInteger {
 
     public static void main(String[] args) {
-        System.out.println("hgh");
-        String s = "XIII";
+        String s = "MCMXCIV";
         HashMap<Character,Integer> map = new HashMap<>();
         map.put('I',1);
         map.put('V',5);
@@ -23,6 +22,6 @@ public class RomanToInteger {
                 res += map.get(s.charAt(i));
             }
         }
-        System.out.println(res);
+        System.out.println("Result : "+res);
     }
 }
