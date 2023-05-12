@@ -13,17 +13,23 @@ public class Main {
         if (num < 10)
             return num;
         char [] arr = String.valueOf(num).toCharArray();
-        int sum = 0;
-        System.out.println("Array Length : "+arr.length);
-        while(arr.length == 1){
-            sum = Character.getNumericValue(arr[0]);
+        int sum ;
+
+        do {
+            sum = 0;
+            for (char c : arr) {
+                sum += Character.getNumericValue(c);
+            }
             arr = String.valueOf(sum).toCharArray();
-            System.out.println("Array Length : "+arr.length);
-        }
+        }while (sum > 9);
+
+
         return sum;
     }
     public static void main(String[] args) {
         int num = 334121;
         System.out.println(addDigits2(num));
+        System.out.println("-----");
+        System.out.println(addDigits(num));
     }
 }
