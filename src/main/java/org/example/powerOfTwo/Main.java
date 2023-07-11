@@ -7,21 +7,21 @@ public class Main {
          *
          * An integer n is a power of two, if there exists an integer x such that n == 2x.
          */
-        System.out.println(16);
-        System.out.println(12);
+        System.out.println(isPowerOfTwo(5));
+        System.out.println(isPowerOfTwo(8));
     }
 
     public static boolean isPowerOfTwo(int n) {
-        if(n == 0 ){
+        if (n == 0) {
             return false;
         }
-        if ( n == 1){
+        if (n == 1) {
             return true;
         }
-        if(n % 2  !=0 ){
+        if (n % 2 != 0) {
             return false;
         }
 
-        return isPowerOfTwo(n/2);
+        return isPowerOfTwo(n / 2);
     }
 }
